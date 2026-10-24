@@ -1,0 +1,84 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - docs
+  - legal
+  - other
+  - website
+hosts:
+- host: api.moneta.health
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: moneta.health
+  role: api
+  relation: own
+- host: moneta.health
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: moneta.health
+  role: other
+  relation: own
+- host: monetahealth.notion.site
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: notion.site
+  role: legal
+  relation: platform
+- host: try.moneta.health
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - GettingStarted
+  serves:
+  - hosting
+  vendor: github-pages
+  registrable_domain: moneta.health
+  role: docs
+  relation: own
+- host: www.moneta.health
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - Support
+  - Blog
+  - Pricing
+  serves:
+  - docs
+  - hosting
+  vendor: vercel
+  registrable_domain: moneta.health
+  role: website
+  relation: own

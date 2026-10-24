@@ -1,25 +1,81 @@
 aid: moneta-health
+
 name: Moneta Health
-description: 'Moneta Health is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by true-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.moneta.health/favicon/og.png
+
+description: Moneta Health provides an at‑home memory rehabilitation program delivered via phone and video. It offers personalized cognitive therapy
+  to improve memory, focus, and daily functioning for patients with mild cognitive impairment. Backed by True Ventures, the service is covered
+  by insurance in several U.S. states and aims to make brain health care accessible remotely.
+
 url: https://raw.githubusercontent.com/api-evangelist/moneta-health/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- Health
+- Memory
+- Telehealth
+- Cognitive Rehabilitation
+- At-Home Care
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: Hosts
+  url: hosts/moneta-health-hosts.yml
+- type: Vendors
+  url: vendors/moneta-health-vendors.yml
+- type: DomainSecurity
+  url: security/moneta-health-domain-security.yml
+- type: Website
+  url: https://www.moneta.health
+- type: DeveloperPortal
+  url: https://www.moneta.health/providers
+- type: Documentation
+  url: https://www.moneta.health/about
+- type: APIReference
+  url: https://www.moneta.health/about
+- type: GettingStarted
+  url: https://try.moneta.health/sign-up
+- type: Support
+  url: https://www.moneta.health/resources
+- type: Blog
+  url: https://www.moneta.health/press
+- type: TermsOfService
+  url: https://monetahealth.notion.site/MONETA-HEALTH-TERMS-OF-USE-38461b64ec1d4087a85425d8adfb9b55
+- type: PrivacyPolicy
+  url: https://monetahealth.notion.site/MONETA-HEALTH-WEBSITE-PRIVACY-POLICY-0e546ea973cc488e9a35c61534488993
+- type: Pricing
+  url: https://www.moneta.health/locations
+
+apis:
+- name: Moneta Health API
+  description: API for Moneta Health services as described on the developer portal.
+  humanURL: https://www.moneta.health/providers
+  baseURL: null
+  aid: moneta-health:moneta-health-api
+
 x-backed-by:
 - true-ventures
-common:
-- type: Website
-  url: https://moneta.health
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
